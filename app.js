@@ -5,10 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let trumpLeft = 220
     let trumpBottom = 100
+    let gravity = 2
 
     function startGame() {
+        trumpBottom -= gravity
         trump.style.bottom = trumpBottom + 'px'
         trump.style.left = trumpLeft + 'px'
     }
-    startGame()
+    let timerId =setInterval(startGame, 20)
 })
