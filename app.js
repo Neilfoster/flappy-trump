@@ -13,4 +13,17 @@ document.addEventListener('DOMContentLoaded', () => {
         trump.style.left = trumpLeft + 'px'
     }
     let timerId =setInterval(startGame, 20)
+
+    function control(e) {
+        if (e.keyCode === 32) {
+            jump()
+        }
+    }
+
+    function jump() {
+        if (trumpBottom < 500) trumpBottom += 50
+        trump.style.bottom = trumpBottom + 'px'
+        console.log(trumpBottom)
+    }
+    document.addEventListener('keyup', control)
 })
