@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
         let timerId = setInterval(moveObstacle, 20)
+        setTimeout(generateObstacle, 3000)
     }
     generateObstacle()
 })
