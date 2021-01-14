@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let trumpBottom = 100;
   let gravity = 2;
   let isGameOver = false;
-  let gap = 400;
+  let gap = 450;
 
   function startGame() {
     trumpBottom -= gravity;
