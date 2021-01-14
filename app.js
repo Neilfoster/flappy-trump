@@ -47,10 +47,12 @@ document.addEventListener("DOMContentLoaded", () => {
         gameDisplay.removeChild(obstacle);
       }
       if (
-        obstacleLeft > 200 && obstacleLeft < 280 && trumpLeft == 200 ||
+        obstacleLeft > 200 && obstacleLeft < 280 && trumpLeft === 220 &&
+        (trumpBottom < obstacleBottom + 153 || trumpBottom > obstacleBottom + gap - 200) ||
         trumpBottom === 0
       ) {
-        gameOver();
+        gameOver()
+        clearInterval(timerId);
       }
     }
     let timerId = setInterval(moveObstacle, 20);
